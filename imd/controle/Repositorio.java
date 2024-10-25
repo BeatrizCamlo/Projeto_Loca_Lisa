@@ -27,4 +27,23 @@ public class Repositorio {
 			System.out.println();
 		}
 	}
+
+	public void listarCarrosAlugados() {
+		System.out.println("Lista de Carros Alugados: ");
+
+		boolean encontrouCarrosAlugados = false; // Para verificar se encontrou algum carro alugado
+		for (Veiculo veiculo : veiculosEstoque) {
+			if (veiculo.isAlugado()) {
+				System.out.println("Placa: " + veiculo.getPlaca());
+				System.out.println("Marca: " + veiculo.getMarca());
+				System.out.println("Aluguel R$ " + veiculo.getValorAluguel());
+				System.out.println();
+				encontrouCarrosAlugados = true; // Encontrou pelo menos um carro alugado
+			}
+		}
+
+		if (!encontrouCarrosAlugados) {
+			System.out.println("Nenhum carro alugado.");
+		}
+	}
 }
