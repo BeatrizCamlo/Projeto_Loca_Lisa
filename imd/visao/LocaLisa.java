@@ -64,5 +64,6 @@ public class LocaLisa {
 	repositorio.listarVeiculosEstoque();
 	m1.fazerTrocaOleo();
 
+	repositorio.listarCarrosAlugados();
 	}
 }
